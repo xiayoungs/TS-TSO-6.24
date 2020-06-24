@@ -82,7 +82,9 @@ def slove():                           #迭代函数
     global best,now;
     temp = [0]*m;                      #中间变量记录交换结果
     a = 0; b = 0;                      #记录交换城市下标
-    ob_way =[0]*m; cop(ob_way,now_way);ob_value= get_value(now_way);   #暂存邻域最优解
+    ob_way =[0]*m;
+    cop(ob_way,now_way);
+    ob_value= get_value(now_way);      #暂存邻域最优解
     for i in range(1,m):               #搜索所有邻域
         for j in range(1,m):
             if(i+j >= m): break;
